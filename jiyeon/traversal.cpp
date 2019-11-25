@@ -6,7 +6,7 @@ using namespace std;
 //이진 트리
 struct TreeNode {
     int label; //저장할 자료
-    TreeNode* parent;
+    //TreeNode* parent;
 
     TreeNode* rightChildren; //오른쪽 자식
     TreeNode* leftChildren; // 왼쪽 자식
@@ -19,7 +19,7 @@ TreeNode* findTree(vector<int> preOrder, vector<int> inOrder);
 int main(){
     int numOfTest;
     
-    cout << "Enter num of test : ";
+    //cout << "Enter num of test : ";
     cin >> numOfTest;
     
     for(int i=0; i<numOfTest; i++){
@@ -36,9 +36,7 @@ void printLabels(TreeNode* root){
         printLabels(root->leftChildren);
     if(root->rightChildren != NULL)
         printLabels(root->rightChildren);
-    //if(root->label != 0){
-        cout << root->label << " ";
-    //}
+    cout << root->label << " ";
 }
 
 
@@ -65,7 +63,7 @@ void traversal(){
     
     Tree = findTree(preOrder, inOrder);
     
-    cout << "후위 순회 결과 : " << endl;
+    //cout << "후위 순회 결과 : " << endl;
     printLabels(Tree);
     cout << endl;
     
