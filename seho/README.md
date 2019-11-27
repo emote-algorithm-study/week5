@@ -20,7 +20,18 @@
  
 
 # 트리의 구현과 순회
-- 
+- 기본적인 노드(Vertex) 구조체
+<code>
+ struct Node {
+ 
+Node* parent;
+   
+Node* leftchild;  
+  Node* rightchild;    
+   int value   
+ }
+ </code>
+ # 
 
 
 
